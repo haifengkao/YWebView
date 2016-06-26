@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YWebView_Example' do
+  pod 'YWebView', :path => '../'
+
+end
+
+target 'YWebView_Tests' do
+  pod 'YWebView', :path => '../'
+  pod 'Kiwi'
+end

@@ -1,0 +1,6 @@
+framework module YWebView {
+  umbrella header "YWebView-umbrella.h"
+
+  export *
+  module * { export * }
+}

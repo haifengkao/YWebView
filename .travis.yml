@@ -1,0 +1,15 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+language: objective-c
+before_install:
+  #- brew update
+  #- "brew uninstall xctool; brew install xctool --HEAD;"
+  - gem i cocoapods --no-ri --no-rdoc
+  - "gem install slather --no-rdoc --no-ri --no-document --quiet"
+#xcode_workspace: Example/YWebView.xcworkspace
+#xcode_scheme: YWebView-Example
+#xcode_sdk: iphonesimulator
+script: xctool test -workspace Example/YWebView.xcworkspace -scheme YWebView-Example -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+after_success: slather

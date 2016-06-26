@@ -56,6 +56,16 @@
 
 @implementation YWebView
 
+- (instancetype)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    return [self initWithFrame:frame configuration:nil];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration*)theConfiguration
 {
     YMessageHandler* handler = [[YMessageHandler alloc] init];

@@ -84,19 +84,19 @@
     for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
         // Don't even bother with values containing a `'`
         if ([cookie.name rangeOfString:@"'"].location != NSNotFound) {
-            NSLog(@"Skipping %@ because it contains a '", cookie.properties);
+            //NSLog(@"Skipping %@ because it contains a '", cookie.properties);
             continue;
         }
 
         // Is the cookie for current domain?
         if (![cookie.domain hasSuffix:validDomain]) {
-            NSLog(@"Skipping %@ (because not %@)", cookie.properties, validDomain);
+            //NSLog(@"Skipping %@ (because not %@)", cookie.properties, validDomain);
             continue;
         }
 
         // Are we secure only?
         if (cookie.secure && !requestIsSecure) {
-            NSLog(@"Skipping %@ (because %@ not secure)", cookie.properties, request.URL.absoluteString);
+            //NSLog(@"Skipping %@ (because %@ not secure)", cookie.properties, request.URL.absoluteString);
             continue;
         }
 

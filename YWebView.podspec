@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'YWebView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of YWebView.'
+  s.summary          = 'WKWebview with persistent cookies support.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                       WKWebView, unlike UIWebView, doesn't support cookie persistency and sharing. There are multiple solutions on the Internet to deal with issue. YWebView combines the existing solutions to make WKWebView behave like the Old UIWebView.
                        DESC
 
   s.homepage         = 'https://github.com/haifengkao/YWebView'

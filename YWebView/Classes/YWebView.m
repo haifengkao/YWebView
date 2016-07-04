@@ -50,8 +50,11 @@
 
 @end
 
+#define Y_HANDLER_NAME @"y_updateCookies"
 @interface YWebView()
 @property (nonatomic, strong) YMessageHandler* messageHandler;
+@property (nonatomic, strong) NSMutableArray* messageHandlerNames;
+@property (nonatomic, strong) WKWebViewConfiguration* theConfiguration;
 @end
 
 @implementation YWebView
@@ -75,13 +78,29 @@
     configuration.userContentController = controller;
 
     [YWebView addCookieInScriptWithController:controller];
-    [YWebView addCookieOutScriptWithController:controller handler:handler];
+    [YWebView addCookieOutScriptWithController:controller handler:handler]; // will add Y_HANDLER_NAME here
 
     if (self = [super initWithFrame:frame configuration:configuration]) {
+        _theConfiguration = configuration;
+        _messageHandlerNames = [[NSMutableArray alloc] init];
         _messageHandler = handler;
         _messageHandler.webView = self;
+
+        [self addScriptMessageHandlerNameForCleanup:Y_HANDLER_NAME];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    for (NSString* name in _messageHandlerNames) {
+        [_theConfiguration.userContentController removeScriptMessageHandlerForName:name];
+    }
+}
+
+- (void)addScriptMessageHandlerNameForCleanup:(NSString*)name
+{
+    [self.messageHandlerNames addObject:name];
 }
 
 - (WKNavigation*)loadRequest:(NSURLRequest*)originalRequest
@@ -146,13 +165,13 @@
 
 + (void)addCookieOutScriptWithController:(WKUserContentController*)userContentController handler:(id<WKScriptMessageHandler>)handler
 {
-    WKUserScript *cookieOutScript = [[WKUserScript alloc] initWithSource:@"window.webkit.messageHandlers.y_updateCookies.postMessage(document.cookie);"
+    WKUserScript *cookieOutScript = [[WKUserScript alloc] initWithSource:@"window.webkit.messageHandlers." Y_HANDLER_NAME @".postMessage(document.cookie);"
                                                            injectionTime:WKUserScriptInjectionTimeAtDocumentStart
                                                         forMainFrameOnly:NO];
     [userContentController addUserScript:cookieOutScript];
 
     [userContentController addScriptMessageHandler:handler
-                                              name:@"y_updateCookies"];
+                                              name:Y_HANDLER_NAME];
 }
 
 + (NSString *)javascriptStringWithCookie:(NSHTTPCookie*)cookie {

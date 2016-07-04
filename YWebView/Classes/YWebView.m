@@ -7,6 +7,7 @@
 //
 
 #import "YWebView.h"
+#import "NSString+Cookie.h" // convert NSString to NSHttpCookie
 
 /** 
   * YMessageHandler deals with the script messages sent from cookieOutScript
@@ -29,22 +30,31 @@
             continue;
         }
 
+        // we need NSHTTPCookieOriginURL for NSHTTPCookie to be created
+        NSString* cookieWithURL = [NSString stringWithFormat:@"%@; ORIGINURL=%@", cookie, self.webView.URL];
+        NSHTTPCookie* httpCookie = [cookieWithURL cookie];
+
+        if (httpCookie) {
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:httpCookie];
+        } 
+            
+        // TODO: why do we update stale value only?
         // Get the cookie in shared storage with that name
-        NSHTTPCookie *localCookie = nil;
-        for (NSHTTPCookie *c in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:self.webView.URL]) {
-            if ([c.name isEqualToString:comps[0]]) {
-                localCookie = c;
-                break;
-            }
-        }
+        //NSHTTPCookie *localCookie = nil;
+        //for (NSHTTPCookie *c in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:self.webView.URL]) {
+            //if ([c.name isEqualToString:comps[0]]) {
+                //localCookie = c;
+                //break;
+            //}
+        //}
 
         // If there is a cookie with a stale value, update it now.
-        if (localCookie) {
-            NSMutableDictionary *props = [localCookie.properties mutableCopy];
-            props[NSHTTPCookieValue] = comps[1];
-            NSHTTPCookie *updatedCookie = [NSHTTPCookie cookieWithProperties:props];
-            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:updatedCookie];
-        }
+        //if (localCookie) {
+            //NSMutableDictionary *props = [localCookie.properties mutableCopy];
+            //props[NSHTTPCookieValue] = comps[1];
+            //NSHTTPCookie *updatedCookie = [NSHTTPCookie cookieWithProperties:props];
+            //[[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:updatedCookie];
+        //}
     }
 }
 

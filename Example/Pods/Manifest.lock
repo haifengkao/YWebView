@@ -1,6 +1,6 @@
 PODS:
   - Kiwi (2.4.0)
-  - YWebView (0.3.0)
+  - YWebView (0.5.0)
 
 DEPENDENCIES:
   - Kiwi
@@ -12,6 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  YWebView: 567859f6b9aad190bb653020285411ff35ec210b
+  YWebView: 04a265c714a97250f5fe0ba71f285ebdd92df94e
 
 COCOAPODS: 0.39.0

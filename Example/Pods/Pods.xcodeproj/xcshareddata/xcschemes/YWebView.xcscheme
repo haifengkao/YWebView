@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D3DAB868CDAD8967B22AD288'
+               BlueprintIdentifier = '2BF025D0A13110221CD3663E'
                BlueprintName = 'YWebView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'YWebView.framework'>

@@ -131,7 +131,7 @@
         }
 
         // Is the cookie for current domain?
-        if (![cookie.domain hasSuffix:validDomain]) {
+        if (![validDomain hasSuffix:cookie.domain] && ![cookie.domain hasSuffix:validDomain]) {
             //NSLog(@"Skipping %@ (because not %@)", cookie.properties, validDomain);
             continue;
         }

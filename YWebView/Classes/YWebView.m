@@ -167,7 +167,7 @@
         }
 
         // Create a line that appends this cookie to the web view's document's cookies
-        [script appendFormat:@"if ([cookieNames.indexOf('%@') == -1) { document.cookie='%@'; };\n", cookie.name, [self javascriptStringWithCookie:cookie]];
+        [script appendFormat:@"if (cookieNames.indexOf('%@') == -1) { document.cookie='%@'; };\n", cookie.name, [self javascriptStringWithCookie:cookie]];
 
         WKUserScript *cookieInScript = [[WKUserScript alloc] initWithSource:script
                                                               injectionTime:WKUserScriptInjectionTimeAtDocumentStart

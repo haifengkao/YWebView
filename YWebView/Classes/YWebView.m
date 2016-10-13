@@ -74,6 +74,11 @@
     return [self initWithFrame:CGRectZero];
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    return [self initWithCoder:coder];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     return [self initWithFrame:frame configuration:nil];

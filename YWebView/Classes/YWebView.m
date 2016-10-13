@@ -76,7 +76,7 @@
 
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
-    return [self initWithCoder:coder];
+    return [super initWithCoder:coder];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame

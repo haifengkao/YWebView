@@ -170,15 +170,14 @@
         if ([cookie.value rangeOfString:@"'"].location != NSNotFound) {
             continue;
         }
-
         // Create a line that appends this cookie to the web view's document's cookies
         [script appendFormat:@"if (cookieNames.indexOf('%@') == -1) { document.cookie='%@'; };\n", cookie.name, [self javascriptStringWithCookie:cookie]];
 
-        WKUserScript *cookieInScript = [[WKUserScript alloc] initWithSource:script
-                                                              injectionTime:WKUserScriptInjectionTimeAtDocumentStart
-                                                           forMainFrameOnly:NO];
-        [userContentController addUserScript:cookieInScript];
     }
+    WKUserScript *cookieInScript = [[WKUserScript alloc] initWithSource:script
+                                                          injectionTime:WKUserScriptInjectionTimeAtDocumentStart
+                                                       forMainFrameOnly:NO];
+    [userContentController addUserScript:cookieInScript];
 }
 
 + (void)addCookieOutScriptWithController:(WKUserContentController*)userContentController handler:(id<WKScriptMessageHandler>)handler

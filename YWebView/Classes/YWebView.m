@@ -118,8 +118,15 @@
 
 - (WKNavigation*)loadRequest:(NSURLRequest*)originalRequest
 {
+    NSString *validDomain = originalRequest.URL.host;
+
+    if (validDomain.length <= 0) {
+        // hasSuffix requires non-nil string
+        return [super loadRequest:originalRequest];
+    } 
+
     NSMutableURLRequest *request = [originalRequest mutableCopy];
-    NSString *validDomain = request.URL.host;
+
     const BOOL requestIsSecure = [request.URL.scheme isEqualToString:@"https"];
 
     NSMutableArray *array = [NSMutableArray array];

@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     YWebView* webView = [[YWebView alloc] initWithFrame:self.view.bounds configuration:nil];
-    NSURL* url = [NSURL URLWithString:@"http://www.bing.com"];
+    NSURL* url = [NSURL URLWithString:@"http://www.google.com"];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     self.webView = webView;

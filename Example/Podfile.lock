@@ -1,10 +1,14 @@
 PODS:
   - Kiwi (2.4.0)
-  - YWebView (0.12.0)
+  - YWebView (0.13.0)
 
 DEPENDENCIES:
   - Kiwi
   - YWebView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kiwi
 
 EXTERNAL SOURCES:
   YWebView:
@@ -12,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  YWebView: 88b178e97b9d125205ff2761abcb665a7042e633
+  YWebView: 7247ffefce0870929dc4d0af68a49b543f6c3c97
 
 PODFILE CHECKSUM: fdda404a3aa2a39f980154c5087e87f1906aa1b0
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.9.3

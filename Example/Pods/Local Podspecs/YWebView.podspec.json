@@ -1,6 +1,6 @@
 {
   "name": "YWebView",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "summary": "WKWebview with persistent cookie support.",
   "description": "WKWebView, unlike UIWebView, doesn't support cookie persistency and sharing. There are multiple solutions on the Internet to deal with issue. YWebView combines the existing solutions to make WKWebView behave like the Old UIWebView.",
   "homepage": "https://github.com/haifengkao/YWebView",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/haifengkao/YWebView.git",
-    "tag": "0.13.0"
+    "tag": "0.14.0"
   },
   "platforms": {
     "ios": "8.0",

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YWebView'
-  s.version          = '0.16.0'
+  s.version          = '0.17.0'
   s.summary          = 'WKWebview with persistent cookie support.'
 
 # This description is used to generate tags and improve search results.

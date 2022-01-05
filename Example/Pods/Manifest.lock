@@ -1,8 +1,8 @@
 PODS:
   - Nimble (9.2.1)
   - Quick (4.0.0)
-  - YWebView (0.1.0)
-  - YWebView/Tests (0.1.0):
+  - YWebView (0.17.0)
+  - YWebView/Tests (0.17.0):
     - Nimble
     - Quick
 
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
-  YWebView: cf86179691e1ce2d7abad0bd29fd0cd7d36f70aa
+  YWebView: 14ea3657f084b78977c02d8c152b95f553f4a616
 
 COCOAPODS: 1.11.2
 

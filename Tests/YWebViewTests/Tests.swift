@@ -7,6 +7,11 @@ import YWebView
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
+        describe("YWebView") {
+            it("can be created") {
+                expect(YWebView()).notTo(beNil())
+            }
+        }
         xdescribe("these will fail") {
             it("can do maths") {
                 expect(1) == 2

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YWebView'
-  s.version          = '0.18.0'
+  s.version          = '0.19.0'
   s.summary          = 'WKWebview with persistent cookie support.'
 
 # This description is used to generate tags and improve search results.
@@ -28,10 +28,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/haifengkao/YWebView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
+  s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.11'
 
-
+  s.swift_version = '5'
   s.source_files = 'Sources/YWebView/**/*'
 
   s.test_spec 'Tests' do |test_spec|

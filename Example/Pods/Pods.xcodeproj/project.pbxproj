@@ -1702,60 +1702,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00483B7192CE3DF5E3E0986D6CC61EA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34440B89DDAE8E139870FE753EB3687 /* YWebView-iOS.unit-tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGNING_ALLOWED = YES;
-				CODE_SIGNING_REQUIRED = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-Info.plist";
-				PRODUCT_NAME = "YWebView-iOS-Unit-Tests";
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		008B410F47FDD63677CC51DDEFC928B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50B2E024B35DBEFD8C131E9AA4582CF7 /* YWebView-iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS.modulemap";
-				PRODUCT_MODULE_NAME = YWebView;
-				PRODUCT_NAME = YWebView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		08BAB06BECFDBA97700E04BA8953611D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA14E8B5F4A5369F22C1CD553253D122 /* Pods-YWebView (iOS).release.xcconfig */;
@@ -1792,6 +1738,104 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		1F1D690003EF34E1A19B4373B4D63218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B2245D2D2CC84DD190790EA9544DBEA /* YWebView-macOS.unit-tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "YWebView-macOS-Unit-Tests";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+			};
+			name = Release;
+		};
+		2846CDCFB92ACD650A2F34EB0122DC82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34440B89DDAE8E139870FE753EB3687 /* YWebView-iOS.unit-tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-Info.plist";
+				PRODUCT_NAME = "YWebView-iOS-Unit-Tests";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+			};
+			name = Debug;
+		};
+		34FB2366566581E9FCFBE373E8B35335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A01EF5F4AE6CCF88282588629748424A /* YWebView-iOS.unit-tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-Info.plist";
+				PRODUCT_NAME = "YWebView-iOS-Unit-Tests";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40A1BBFB23C641173A9392BBA46E6DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FFB3E15076474D6CE03298D4238E6D9 /* YWebView-macOS.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS.modulemap";
+				PRODUCT_MODULE_NAME = YWebView;
+				PRODUCT_NAME = YWebView;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		428ABF289770642288C682B1300D8778 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1930,6 +1974,40 @@
 			};
 			name = Debug;
 		};
+		68C3FDEE71086349844AB778ACD5020D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50B2E024B35DBEFD8C131E9AA4582CF7 /* YWebView-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS.modulemap";
+				PRODUCT_MODULE_NAME = YWebView;
+				PRODUCT_NAME = YWebView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6AACC740971316C24CAB29A18DF18680 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EF498F47413A52E4437FEB4EF8C6FD13 /* Nimble-macOS.debug.xcconfig */;
@@ -1956,42 +2034,6 @@
 				MODULEMAP_FILE = "Target Support Files/Nimble-macOS/Nimble-macOS.modulemap";
 				PRODUCT_MODULE_NAME = Nimble;
 				PRODUCT_NAME = Nimble;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		75AB4869B26CFEFFFF1518173A9FDA08 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FFB3E15076474D6CE03298D4238E6D9 /* YWebView-macOS.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS.modulemap";
-				PRODUCT_MODULE_NAME = YWebView;
-				PRODUCT_NAME = YWebView;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2034,27 +2076,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8721702FFCAA13DCD43DBB541982A9E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D9D5545B489B3077265DF025CD3EAAC /* YWebView-macOS.unit-tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "YWebView-macOS-Unit-Tests";
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -2188,42 +2209,6 @@
 			};
 			name = Debug;
 		};
-		9502F7ADDBDD5BB0F102E14357AE80EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9FE7682D97C97401C23097571477A9C /* YWebView-macOS.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS.modulemap";
-				PRODUCT_MODULE_NAME = YWebView;
-				PRODUCT_NAME = YWebView;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		96629609EE1D8616C19C2BEBECAA5115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F029452A08FB543DCE6BEFCEC98D4872 /* Quick-iOS.debug.xcconfig */;
@@ -2256,26 +2241,38 @@
 			};
 			name = Debug;
 		};
-		A6193B43B75BA89FC57202E4F8DBDEAC /* Release */ = {
+		99D932562EBBE684D4BFD028A8BE44CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B2245D2D2CC84DD190790EA9544DBEA /* YWebView-macOS.unit-tests.release.xcconfig */;
+			baseConfigurationReference = 09776F00F0D66695D4FF63E48C6D6117 /* YWebView-iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "YWebView-macOS-Unit-Tests";
-				SDKROOT = macosx;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS.modulemap";
+				PRODUCT_MODULE_NAME = YWebView;
+				PRODUCT_NAME = YWebView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		B27F937C0E52C179A4A21E2B6DC706A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2307,39 +2304,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BAD7DFEDF788C09D2414763E5A4060F8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09776F00F0D66695D4FF63E48C6D6117 /* YWebView-iOS.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS.modulemap";
-				PRODUCT_MODULE_NAME = YWebView;
-				PRODUCT_NAME = YWebView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2380,6 +2344,63 @@
 			};
 			name = Release;
 		};
+		BFD3516CB7E812164E16EBA5AE89EB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D9D5545B489B3077265DF025CD3EAAC /* YWebView-macOS.unit-tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "YWebView-macOS-Unit-Tests";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+			};
+			name = Debug;
+		};
+		D5F7A967650C9FF551179204834733B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9FE7682D97C97401C23097571477A9C /* YWebView-macOS.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YWebView-macOS/YWebView-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/YWebView-macOS/YWebView-macOS.modulemap";
+				PRODUCT_MODULE_NAME = YWebView;
+				PRODUCT_NAME = YWebView;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E5EC68D88328397FDA49BB43C52DBCC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E63AB2EB778C988D3274BDCBAEBB0AC /* Pods-YWebView (macOS).release.xcconfig */;
@@ -2414,27 +2435,6 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E7C0F7E7665A2029098CE9FFCF58370F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A01EF5F4AE6CCF88282588629748424A /* YWebView-iOS.unit-tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGNING_ALLOWED = YES;
-				CODE_SIGNING_REQUIRED = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YWebView-iOS/YWebView-iOS-Unit-Tests-Info.plist";
-				PRODUCT_NAME = "YWebView-iOS-Unit-Tests";
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -2486,8 +2486,8 @@
 		30118E8AA57EC3338D8E6AF47F5995BC /* Build configuration list for PBXNativeTarget "YWebView-iOS-Unit-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00483B7192CE3DF5E3E0986D6CC61EA4 /* Debug */,
-				E7C0F7E7665A2029098CE9FFCF58370F /* Release */,
+				2846CDCFB92ACD650A2F34EB0122DC82 /* Debug */,
+				34FB2366566581E9FCFBE373E8B35335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2495,8 +2495,8 @@
 		3FE0BDADE54393036422ED52147D5FAE /* Build configuration list for PBXNativeTarget "YWebView-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75AB4869B26CFEFFFF1518173A9FDA08 /* Debug */,
-				9502F7ADDBDD5BB0F102E14357AE80EE /* Release */,
+				40A1BBFB23C641173A9392BBA46E6DAB /* Debug */,
+				D5F7A967650C9FF551179204834733B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2531,8 +2531,8 @@
 		A4083DF964B123ABBDE7A109E88967A0 /* Build configuration list for PBXNativeTarget "YWebView-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAD7DFEDF788C09D2414763E5A4060F8 /* Debug */,
-				008B410F47FDD63677CC51DDEFC928B4 /* Release */,
+				99D932562EBBE684D4BFD028A8BE44CC /* Debug */,
+				68C3FDEE71086349844AB778ACD5020D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2567,8 +2567,8 @@
 		FDD7A477045885AB322084F21C3BD61E /* Build configuration list for PBXNativeTarget "YWebView-macOS-Unit-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8721702FFCAA13DCD43DBB541982A9E7 /* Debug */,
-				A6193B43B75BA89FC57202E4F8DBDEAC /* Release */,
+				BFD3516CB7E812164E16EBA5AE89EB09 /* Debug */,
+				1F1D690003EF34E1A19B4373B4D63218 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

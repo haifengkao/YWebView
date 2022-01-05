@@ -1,5 +1,0 @@
-# .slather.yml
-#
-coverage_service: coveralls
-xcodeproj: Example/YWebView.xcodeproj
-source_directory: Pod/Classes

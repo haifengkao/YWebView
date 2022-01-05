@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/YWebView-macOS/YWebView-macOS-Unit-Tests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/YWebView-macOS/YWebView.framework
+${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework
+${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework

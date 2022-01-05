@@ -1,11 +1,31 @@
+source 'https://cdn.cocoapods.org/'
+
+# SwiftUI preview doesn't work with static linkage framework
+# but static linkage will reduce app startup time, it should be used in release
 use_frameworks!
+# use_frameworks! :linkage => :static
 
-target 'YWebView_Example' do
-  pod 'YWebView', :path => '../'
 
+def allPods
+  pod 'YWebView', :path => '../', :testspecs => ['Tests']
 end
 
-target 'YWebView_Tests' do
-  pod 'YWebView', :path => '../'
-  pod 'Kiwi'
+target 'YWebView (iOS)' do
+  platform :ios, '14.0'
+  allPods
+end
+
+target 'YWebView (macOS)' do
+  platform :osx, '11.0'
+  allPods
+end
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+      config.build_settings.delete 'MACOS_DEPLOYMENT_TARGET'
+    end
+  end
 end

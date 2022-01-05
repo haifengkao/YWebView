@@ -3,7 +3,7 @@
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
 Pod::Spec.new do |s|
@@ -31,9 +31,16 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
 
-  s.source_files = 'YWebView/Classes/**/*'
-  
-  # s.resource_bundles = {
+
+  s.source_files = 'Sources/YWebView/**/*'
+
+  s.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'Tests/YWebViewTests/*.{swift}'
+    test_spec.dependency 'Quick' # This dependency will only be linked with your tests.
+    test_spec.dependency 'Nimble' # This dependency will only be linked with your tests.
+  end
+
+# s.resource_bundles = {
   #   'YWebView' => ['YWebView/Assets/*.png']
   # }
 

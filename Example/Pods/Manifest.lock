@@ -1,23 +1,29 @@
 PODS:
-  - Kiwi (2.4.0)
-  - YWebView (0.17.0)
+  - Nimble (9.2.1)
+  - Quick (4.0.0)
+  - YWebView (0.1.0)
+  - YWebView/Tests (0.1.0):
+    - Nimble
+    - Quick
 
 DEPENDENCIES:
-  - Kiwi
   - YWebView (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - Kiwi
+  - YWebView/Tests (from `../`)
 
 EXTERNAL SOURCES:
   YWebView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  YWebView: 12d50c17b7f58e43c8404effb0a3321dd277d5b9
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  YWebView: cf86179691e1ce2d7abad0bd29fd0cd7d36f70aa
 
-PODFILE CHECKSUM: fdda404a3aa2a39f980154c5087e87f1906aa1b0
+COCOAPODS: 1.11.2
 
-COCOAPODS: 1.9.3
+PODFILE CHECKSUM: bfe0bff710d33a1375318c7048bbf376d96fbed5
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
